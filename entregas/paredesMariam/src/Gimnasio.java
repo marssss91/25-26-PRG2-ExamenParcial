@@ -19,19 +19,33 @@ public class Gimnasio {
         this.ocupacion = ocupacion;
     }
 
-    public Gimnasio(String actividades, String monitor) 
+    public Gimnasio(String actividades, String monitor) {
+        this(actividades, monitor, "01/01/2025", 0);
+    }
 
-    public Gimnasio() 
+    public Gimnasio() {
+        this("", "", "", 0);
+    }
 
-    public Gimnasio(Gimnasio gimnasio) 
+    public Gimnasio(Gimnasio gimnasio) {
+        this(gimnasio.actividades, gimnasio.monitor, gimnasio.fecha, gimnasio.ocupacion);
+    }
 
-    public Gimnasio clone() 
+    public Gimnasio clone() {
+        return new Gimnasio(this);
+    }
 
-    public String monitor() 
+    public String monitor() {
+        return monitor;
+    }
 
-    public String actividades() 
+    public String actividades() {
+        return actividades;
+    }
 
-    public void hacerReservas() 
+    public void hacerReservas() {
+        this.ocupacion++;
+    }
 
     public void consultarReservas() 
     public void cancelarReservas() 
