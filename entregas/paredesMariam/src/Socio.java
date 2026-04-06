@@ -44,11 +44,20 @@ public int dni() {
         return dni;
     }
 
-    public String suscripcion() 
+    public String suscripcion(){
+        return suscripcion;
+    } 
 
-    public boolean equals(Socio socio) 
+    public boolean equals(Socio socio) {
+        assert socio != null;
+        return this.dni == socio.dni;
+    }
 
-    public boolean tieneSuscripcion(String nombre, int dni, String suscripcion) 
+    public boolean tieneSuscripcion(String nombre, int dni, String suscripcion) {
+        assert nombre != null;
+        assert suscripcion != null;
+        return tieneMismoNombre(nombre) && this.dni == dni && this.suscripcion.equals(suscripcion);
+    }
 
     public boolean tieneMismoNombre(String nombre) 
 
