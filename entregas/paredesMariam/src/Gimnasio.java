@@ -1,8 +1,23 @@
 package vistas.gimnasio;
 
-public class Gimnasio 
+public class Gimnasio {
 
-    public Gimnasio(String actividades, String monitor, String fecha, int ocupacion) 
+    private String actividades;
+    private String monitor;
+    private String fecha;
+    private int ocupacion;
+
+    public Gimnasio(String actividades, String monitor, String fecha, int ocupacion) {
+        assert actividades != null;
+        assert monitor != null;
+        assert fecha != null;
+        assert ocupacion >= 0;
+
+        this.actividades = actividades;
+        this.monitor = monitor;
+        this.fecha = fecha;
+        this.ocupacion = ocupacion;
+    }
 
     public Gimnasio(String actividades, String monitor) 
 
