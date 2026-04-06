@@ -35,10 +35,20 @@ public class Actividades {
     public boolean estaPendiente() {
         return monitor.equals("Pendiente");
     }
-    
-    public boolean equals(Actividades actividades) 
-    public void registrarActividad(String nombre, int dni) 
 
-    public String toString() 
+    public boolean equals(Actividades actividades) assert actividades != null;
+        return this.nombre.equals(actividades.nombre) && this.horario.equals(actividades.horario);
+    }
+    public void registrarActividad(String nombre, int dni) int dni) {
+        assert nombre != null;
+        assert dni > 0;
+        System.out.println("Socio " + nombre + " registrado en " + this.nombre);
+    }
 
-    public void mostrar() 
+    public String toString() {
+        return "Actividad: " + nombre + " | Monitor: " + monitor + " | Horario: " + horario;
+    }
+
+    public void mostrar(){
+        return "Actividad: " + nombre + " | Monitor: " + monitor + " | Horario: " + horario;
+    } 
