@@ -1,10 +1,24 @@
 package vistas.gimnasio;
 
-public class Socio 
+public class Socio {
+    private String nombre;
+    private int dni;
+    private String suscripcion;
+    private String actividadActual;
 
-public Socio(String nombre, int dni, String suscripcion) 
+public Socio(String nombre, int dni, String suscripcion) {
+        assert nombre != null;
+        assert dni > 0;
+        assert suscripcion != null;
 
-public Socio(String nombre, int dni)
+        this.nombre = nombre;
+        this.dni = dni;
+        this.suscripcion = suscripcion;
+        this.actividadActual = "";
+    }
+public Socio(String nombre, int dni){
+        this(nombre, dni, "Básica");
+    }
 
 public Socio()
 
