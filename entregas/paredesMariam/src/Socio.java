@@ -71,8 +71,17 @@ public int dni() {
 
     public void reiniciarActividad() {
         this.actividadActual = "";
+    }
+    public void reiniciarReserva() {
+        reiniciarActividad(); 
+    }
+    public String toString() {
+        return nombre + " (DNI: " + dni + ") - Suscripción: " + suscripcion + 
+               (actividadActual.isEmpty() ? "" : " - Actividad: " + actividadActual);
+    }
 
-    public void reiniciarReserva() 
-    public String toString() 
+    public void mostrar() {
+        System.out.println(this.toString());
+    }
+}
 
-    public void mostrar() 
