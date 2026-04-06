@@ -1,15 +1,24 @@
 package vistas.gimnasio;
 
-public class Actividades 
+public class Actividades {
 
     private String nombre;
     private String monitor;
-    private String horario;
-
+    private String horario; 
     
-    public Actividades(String nombre, String monitor, String horario) 
+    public Actividades(String nombre, String monitor, String horario) {
+        assert nombre != null;
+        assert monitor != null;
+        assert horario != null;
 
-    public Actividades(Actividades actividades) 
+        this.nombre = nombre;
+        this.monitor = monitor;
+        this.horario = horario;
+    }
+
+    public Actividades(Actividades actividades) {
+        this(actividades.nombre, actividades.monitor, actividades.horario);
+    }
 
     public Actividades clone() 
 
