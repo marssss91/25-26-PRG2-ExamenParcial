@@ -20,15 +20,29 @@ public Socio(String nombre, int dni){
         this(nombre, dni, "Básica");
     }
 
-public Socio()
+public Socio(){
+        this("", 0, "");
+    }
 
-public Socio(Socio socio)
+public Socio(Socio socio){
+        this(socio.nombre, socio.dni, socio.suscripcion);
+        this.actividadActual = socio.actividadActual;
+    }{
+        this(socio.nombre, socio.dni, socio.suscripcion);
+        this.actividadActual = socio.actividadActual;
+    }
 
-public Socio clone()
+public Socio clone(){
+        return new Socio(this);
+    }
 
-public String nombre() 
+public String nombre() {
+        return nombre;
+    }
 
-public int dni() 
+public int dni() {
+        return dni;
+    }
 
     public String suscripcion() 
 
