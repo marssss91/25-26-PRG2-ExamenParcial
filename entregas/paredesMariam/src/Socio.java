@@ -59,11 +59,18 @@ public int dni() {
         return tieneMismoNombre(nombre) && this.dni == dni && this.suscripcion.equals(suscripcion);
     }
 
-    public boolean tieneMismoNombre(String nombre) 
+    public boolean tieneMismoNombre(String nombre){
+        assert nombre != null;
+        return this.nombre.equals(nombre);
+    } 
 
-    public void agregarActividad(String actividades) 
+    public void agregarActividad(String actividades) {
+        assert actividades != null;
+        this.actividadActual = actividades;
+    }
 
-    public void reiniciarActividad() 
+    public void reiniciarActividad() {
+        this.actividadActual = "";
 
     public void reiniciarReserva() 
     public String toString() 
