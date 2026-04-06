@@ -20,13 +20,22 @@ public class Actividades {
         this(actividades.nombre, actividades.monitor, actividades.horario);
     }
 
-    public Actividades clone() 
+    public Actividades clone() {
+        return new Actividades(this);
+    }
 
-    public String fecha() 
+    public String fecha() {
+        return horario;
+    }
 
-    public boolean estaEnActividad() 
+    public boolean estaEnActividad() {
+        return !nombre.isEmpty();
+    }
 
-    public boolean estaPendiente() 
+    public boolean estaPendiente() {
+        return monitor.equals("Pendiente");
+    }
+    
     public boolean equals(Actividades actividades) 
     public void registrarActividad(String nombre, int dni) 
 
