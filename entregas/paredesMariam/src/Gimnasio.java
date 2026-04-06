@@ -60,9 +60,19 @@ public class Gimnasio {
         hacerReservas(); 
     }
 
-    public void verReservas() 
+    public void verReservas() {
+        this.mostrar();
+    }
 
-    public void verSocios(String nombre) 
-    public String toString() 
+    public void verSocios(String nombre) {
+        assert nombre != null;
+        System.out.println("Buscando socio: " + nombre + " en " + actividades);
+    }
+    public String toString(){
+        return "Gimnasio - " + actividades + " | Monitor: " + monitor + " | Fecha: " + fecha + " | Reservas: " + ocupacion;
+    } 
 
-    public void mostrar() 
+    public void mostrar() {
+        System.out.println(this.toString());
+    }
+}
