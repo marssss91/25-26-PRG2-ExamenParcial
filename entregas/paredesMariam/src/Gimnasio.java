@@ -47,10 +47,18 @@ public class Gimnasio {
         this.ocupacion++;
     }
 
-    public void consultarReservas() 
-    public void cancelarReservas() 
+    public void consultarReservas() {
+        System.out.println("Ocupación actual: " + ocupacion);
+    }
+    public void cancelarReservas() {
+        if (ocupacion > 0) {
+            this.ocupacion--;
+        }
+    }
 
-    public void inscribirSocios()
+    public void inscribirSocios(){
+        hacerReservas(); 
+    }
 
     public void verReservas() 
 
